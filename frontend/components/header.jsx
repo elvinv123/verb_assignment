@@ -1,0 +1,28 @@
+import React from 'react';
+
+export default function Header(){
+    return(
+        <nav>
+            <section>
+                <img className="logo" src="https://verb-assignment.s3.us-east-2.amazonaws.com/output-onlinepngtools.png"/>
+                <form >
+                    <input type="text"
+                        placeholder="Search All Products"
+                    />
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+                </section>
+            <section className="navbar">
+                <ul>
+                    <li>Home</li>
+                    <li><a href="https://www.linkedin.com/in/elvin-valette-5b2945a5/">LinkedIn</a></li>
+                    <li><a href="https://github.com/elvinv123">GitHub</a></li>
+                    <li><a href="https://angel.co/u/elvin-valette">AngelList</a></li>
+                </ul>
+                <div className="cart">
+                    <i className="fa fa-shopping-cart"></i>
+                </div>
+            </section>
+        </nav>
+    )
+}

@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$roboto: 'Roboto';
+$cursive_font: 'Satisfy';
+$round: 'Varela Round';
+$red: #CA0F34;
+$dark_gray: #333333;
+$light_bg: #2b3039;
+$text: #2d343e;
+$white: #FFFFFF;
+
+body {
+    width: 100%;
+    height: 100%;
+    position:relative;
+    font-family: $round;
+}
+
+.dFlex{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    height:100%;
+    box-sizing: border-box;
+    background-color: transparent;
+}
+
+nav{
+    @extend .dFlex;
+    width: 100%;
+    height: 148px;
+    color: $white;
+    background-color: #333333;
+    flex-direction: column;
+    
+    section{
+        @extend .dFlex;
+        flex-direction: row;
+        form{
+            input{
+                width: 800px;
+                height: 40px;
+                border-radius: 3px 0px 0px 3px;
+                padding-left: 10px;
+                font-weight: 600;
+                border: none;
+            }
+            button{
+                height: 40px;
+                width: 59px;
+                border-radius: 0px 3px 3px 0;
+                border: none;
+                background-color: #3399ff;
+                cursor: pointer;
+            }
+            button:hover{
+                background-color: #008aff;
+            }
+        }
+
+    }
+    .navbar{
+    
+    justify-content: space-between;
+
+    ul{
+        @extend .dFlex;
+        margin:0;
+        padding:0;
+        list-style-type: none;
+
+        li{
+            font-size: 14px;
+            margin-left: 15px;
+            padding: 10px;
+            box-sizing: border-box;
+            
+            cursor: pointer;
+            a{
+                color: $white;
+                text-decoration: none;
+            }
+            
+        }
+        li:hover{
+            text-decoration: underline;
+        }
+    }
+    .cart{
+        color:rgba($white, .7);
+        .fa{
+            cursor: pointer;
+            + .fa{
+                margin-left:15px;
+                padding-right:15px;
+            }
+        }
+
+    }
+    }
+}
+
+.main_content{
+    @extend .dFlex;
+    position: relative;
+    width: 70%;
+    height: 100%;
+    margin: 50px auto;
+    padding: 50px 0 0;
+    box-sizing: border-box;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .card{
+        width: 30%;
+        border-radius: 15px;
+        @extend .dFlex;
+        flex-direction: column;
+        position: relative;
+        transform:scale(.8);
+        transition: all .3s ease-in-out;
+        margin-bottom: 50px;
+        .card_img{
+            margin-top:-5vw;
+            img{
+                width:200px;
+            }
+        }
+        .card_header{
+            @extend .dFlex;
+            flex-direction: column;
+            color:$dark_gray;
+            margin: 25px 0;
+            h2{
+                font-size: 18px;;
+            }
+            p{
+                font-size: 14px;
+                text-align: center;
+                color: $dark_gray;
+                margin: 8px 0;
+            } 
+            .price{
+                font-size: 25px;
+                
+                span{
+                    font-size: 15px;
+                    display: inline-block;
+                    vertical-align: top;
+                }
+            }
+        }
+    }
+    .card:hover{
+        background-color: transparent;
+        transform: scale(1);
+        cursor:pointer;
+    }
+    .btn:hover{
+        
+            background-color: $red;
+            color: $white;
+        
+    }
+}
+
+.btn{
+    width:130px;
+    height:35px;
+    font-size: 14px;
+    border-radius: 35px;
+    color: rgba($white, .5);
+    background-color:$text;
+    @extend .dFlex;
+    cursor: pointer;
+    position: relative;
+    transition: background-color .3s ease;
+    overflow: hidden;
+}
+
+.footer{
+    @extend .dFlex;
+    width:100%;
+    height: 300px;
+    justify-content: center;
+    margin-top: auto;
+    color:rgba($white,.3);
+    font-size: 12px;
+    background-color: $dark_gray;
+    .social{
+        @extend .dFlex;
+       margin-left: 50px;
+        .fa { 
+            justify-content: space-between;
+            width:60px;
+            height:60px;
+            color:rgba($white, .3);
+            font-size: 40px;
+            cursor: pointer;
+            margin-right: 50px;
+        }
+        .fa:hover{
+            color: $red;
+        }
+    }
+}
+
+.logo{
+    width: 240px;
+    margin-right: 50px;
+}
