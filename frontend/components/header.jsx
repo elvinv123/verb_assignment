@@ -1,10 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Header(){
     return(
         <nav>
             <section>
-                <img className="logo" src="https://verb-assignment.s3.us-east-2.amazonaws.com/output-onlinepngtools.png"/>
+                <Link to={`/index`} style={{ textDecoration: 'none' }}>
+                    <img className="logo" src="https://verb-assignment.s3.us-east-2.amazonaws.com/output-onlinepngtools.png"/>
+                </Link>
                 <form >
                     <input type="text"
                         placeholder="Search All Products"

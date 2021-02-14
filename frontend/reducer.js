@@ -1,4 +1,5 @@
-import { ADD_TO_CART, CLEAR } from "./actions";
+import { ADD_TO_CART, CLEAR, REMOVE_ITEM } from "./actions";
+var _ = require('lodash');
 
 const _defaultState = {
   items: [
@@ -9,8 +10,8 @@ const _defaultState = {
       name: "BMW N54 STAGE 3 GEN 2 TURBO KIT",
       description: "",
       sku: "",
-      price: "$2,650.00",
-      onSale: ""
+      price: "$2650.00",
+      onSale: 0
     },
      {
       id: 2,
@@ -20,7 +21,7 @@ const _defaultState = {
       description: "The Ohlins Road & Track kit is designed to offer a very high level of performance for both street driven vehicles, as well as offer the adjustability needed for track cars. These shocks are manually adjustable monotubes, with up to 20 individual settings to adjust rebound from comfort to competition. The threaded body allows accurate adjustability of the front and rear progressive springs to achieve the vehicle ride height center of gravity and level of performance handling desired. Ohlins Road & Track's can also be revalved, rebuilt, and can be supplied with various spring rates to meet your demands!  Ohlins puts every one of their products through vast corrosion test according to ISO 9227.  The end result is a 2-Year limited warranty on all of their products - worldwide. ",
       sku: "",
       price: "$2590.00",
-      onSale: ""
+      onSale: 25
     },
      {
       id: 3,
@@ -29,8 +30,8 @@ const _defaultState = {
       name: "Helical LSD for BMW E90 E92 E82 135i and 335i",
       description: "Gain a prominent advantage over the competition with the MFactory Helical Limited Slip Differential. Through the smooth and constant distribution of power to the wheels, the MFactory Helical LSD puts the power-to-the-ground and maximizes your vehicle's traction!",
       sku: "",
-      price: "$99.95",
-      onSale: ""
+      price: "$999.95",
+      onSale: 0
     },
      {
       id: 4,
@@ -40,7 +41,7 @@ const _defaultState = {
       description: "We are proud to introduce our VRSF 3″ race downpipes for your 2007 to 2011 N54 E90 & E92 335xi. These 3″ downpipes are THE best bang for the buck mod available, with gains ranging from 25-30hp when tuned. By eliminating the restrictive catalytic converters in the factory downpipes, back pressure is reduced significantly which results in faster spool, an increase in power & a more aggressive exhaust note.",
       sku: "",
       price: "$299.99",
-      onSale: ""
+      onSale: 15
     },
      {
       id: 5,
@@ -50,7 +51,7 @@ const _defaultState = {
       description: "Replace your overheated factory intercooler with the VRSF 5″ Performance HD & 7.5″ Competition HD Intercooler to get the most out of your N54 or N55. These intercoolers were designed to be one of the best performing, direct bolt on intercoolers available for your BMW with special attention to quality and performance while maintaining a reasonable price. These intercoolers allow for higher HP gains, mainly due to their ability to keep intake temps down while preventing heat soak which is a common problem with the factory intercooler. This results in a more power and increased reliability with reduced chances of pre-detonation & knock.",
       sku: "",
       price: "$379.99",
-      onSale: ""
+      onSale: 10
     },
     {
       id: 6,
@@ -60,7 +61,7 @@ const _defaultState = {
       description: "Without a doubt, the VRSF 3.5″ Catback Exhaust for your N54 & N55 335i is THE best option for your 335. Our exhaust is made from the highest quality 304 grade, mandrel bent stainless steel and we include super-flex, stainless steel band clamps to ensure quick and easy installation. By eliminating the restrictive catalytic converter in the factory catback, back pressure is reduced significantly which results in faster spool, and MORE POWER.",
       sku: "",
       price: "$779.99",
-      onSale: ""
+      onSale: 0
     }
   ],
   carts: {
@@ -73,10 +74,24 @@ const _defaultState = {
   }
 }
 
+function removeItemOnce(cart, product) {
+  
+  var index = cart.findIndex(function(item){
+    return item.id == product.id
+  });
+  if (index > -1) {
+    cart.splice(index, 1);
+  }
+  return cart;
+}
+
 const reducer = (oldState = _defaultState, action) => {
   switch(action.type) {
     case ADD_TO_CART:
       oldState.cartItems = [...oldState.cartItems, action.item]
+      return oldState;
+    case REMOVE_ITEM:
+      oldState.cartItems = removeItemOnce(oldState.cartItems, action.item);
       return oldState;
     case CLEAR:
       return _defaultState;

@@ -130,33 +130,38 @@ nav{
         transform:scale(.8);
         transition: all .3s ease-in-out;
         margin-bottom: 50px;
-        .card_img{
-            margin-top:-5vw;
-            img{
-                width:200px;
-            }
-        }
-        .card_header{
+        a{
             @extend .dFlex;
+            justify-content: center;
             flex-direction: column;
-            color:$dark_gray;
-            margin: 25px 0;
-            h2{
-                font-size: 18px;;
+            .card_img{
+                margin-top:-5vw;
+                img{
+                    width:200px;
+                }
             }
-            p{
-                font-size: 14px;
-                text-align: center;
-                color: $dark_gray;
-                margin: 8px 0;
-            } 
-            .price{
-                font-size: 25px;
-                
-                span{
-                    font-size: 15px;
-                    display: inline-block;
-                    vertical-align: top;
+            .card_header{
+                @extend .dFlex;
+                flex-direction: column;
+                color:$dark_gray;
+                margin: 25px 0;
+                h2{
+                    font-size: 18px;;
+                }
+                p{
+                    font-size: 14px;
+                    text-align: center;
+                    color: $dark_gray;
+                    margin: 8px 0;
+                } 
+                .price{
+                    font-size: 25px;
+                    
+                    span{
+                        font-size: 15px;
+                        display: inline-block;
+                        vertical-align: top;
+                    }
                 }
             }
         }
@@ -166,12 +171,7 @@ nav{
         transform: scale(1);
         cursor:pointer;
     }
-    .btn:hover{
-        
-            background-color: $red;
-            color: $white;
-        
-    }
+
 }
 
 .btn{
@@ -179,13 +179,20 @@ nav{
     height:35px;
     font-size: 14px;
     border-radius: 35px;
-    color: rgba($white, .5);
+    color: $white;
     background-color:$text;
     @extend .dFlex;
     cursor: pointer;
     position: relative;
     transition: background-color .3s ease;
     overflow: hidden;
+}
+
+.btn:hover{
+    
+        background-color: $red;
+        color: $white;
+    
 }
 
 .footer{

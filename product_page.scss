@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$roboto: 'Roboto';
+$cursive_font: 'Satisfy';
+$round: 'Varela Round';
+$red: #CA0F34;
+$dark_gray: #333333;
+$light_bg: #2b3039;
+$text: #2d343e;
+$white: #FFFFFF;
+
+body {
+    width: 100%;
+    height: 100%;
+    position:relative;
+    font-family: $round;
+}
+
+.dFlex{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.product_card{
+    @extend .dFlex;
+    flex-direction: column;
+    border: #ccc;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    box-shadow: 0 0 15px #bfbfbf;
+    margin: 2% 20% 2% 20%;
+    margin-right: 20%;
+    
+    .product_card_top{
+        @extend .dFlex;
+        flex-direction: row;
+        border-bottom: 1px solid #ccc;
+        justify-content: space-between;
+        min-width: 80%;
+        img{
+            width: 400px;
+        }
+        div{
+            @extend .dFlex;
+            flex-direction: column;
+            margin: 5px;
+            .newPrice{
+                color :red;
+                margin: 5px;
+            }
+            .sale{
+                font-size: 15px;
+                color: #918f8f;
+                margin: 5px;
+            }
+            p{
+                max-width: 400px;
+                font-size: 20px;
+                margin: 5px;
+            }
+        }
+    }
+    .product_card_bottom{
+        @extend .dFlex;
+        flex-direction: column;
+        h2{
+            font-size: 20px;
+            margin: 10px;
+            color: #222222;
+        }
+        p{
+            color:$dark_gray;
+            font-size: 14px;
+            max-width: 800px;
+            margin: 10px;
+
+        }
+
+    }
+}

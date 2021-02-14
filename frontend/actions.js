@@ -1,12 +1,17 @@
 export const ADD_TO_CART = "ADD_TO_CART";
 export const CLEAR = "CLEAR";
+export const REMOVE_ITEM = "REMOVE_ITEM";
 
-export const addToCart = () => {
-  console.log("yo")
+export const addToCart = (item) => {
   return {
   type: ADD_TO_CART,
-  item: {test: "yo"}
+  item: item
 }}
+
+export const removeItem = (item) => ({
+  type: REMOVE_ITEM
+});
+
 export const clearCart = () => ({
   type: CLEAR
 });
