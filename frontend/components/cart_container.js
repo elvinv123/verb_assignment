@@ -3,7 +3,7 @@ import { addToCart, clearCart, removeItem } from '../actions';
 import Cart from './cart';
 
 const mapStateToProps = state => ({
-    cartItems: state.cartItems,
+    cartItems: JSON.parse(localStorage.getItem('cart')),
     items: state.items
 });
 

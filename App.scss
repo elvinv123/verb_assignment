@@ -98,11 +98,14 @@ nav{
     }
     .cart{
         color:rgba($white, .7);
+        text-decoration: none;
         .fa{
+            font-size: 20px;
+            margin-left: 15px;
+            padding: 10px;
             cursor: pointer;
-            + .fa{
-                margin-left:15px;
-                padding-right:15px;
+            &:hover{
+                color: $red; 
             }
         }
 
