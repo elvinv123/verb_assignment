@@ -18,7 +18,6 @@ class ProductPage extends React.Component {
             priceElement = (<>
                                 <p className="newPrice">${newPrice}</p>
                                 <p className="sale">{product.price}(Sale - Save {product.onSale}%)</p>
-                                <p className="sale">SKU: {product.sku}</p>
                             </>
                              )
         }
@@ -43,9 +42,11 @@ class ProductPage extends React.Component {
                     <section className="product_card_top">
                         <img src={product.images[0]}/>
                             {this.price()}
+                        
                     </section>
                     <section className="product_card_bottom">
                         <h2>Product Details</h2>
+                        <p className="sale">SKU: {product.sku}</p>
                         <p>{product.description}</p>
                     </section>
                 </div>
