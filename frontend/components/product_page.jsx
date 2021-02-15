@@ -18,6 +18,7 @@ class ProductPage extends React.Component {
             priceElement = (<>
                                 <p className="newPrice">${newPrice}</p>
                                 <p className="sale">{product.price}(Sale - Save {product.onSale}%)</p>
+                                <p className="sale">SKU: {product.sku}</p>
                             </>
                              )
         }

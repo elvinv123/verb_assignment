@@ -3,30 +3,6 @@ import '../../styling/order.scss';
 
 class OrderConfirmation extends React.Component {
 
-    price() {
-        const productId = this.props.match.params.id;
-        const product = this.props.items.filter(item => item.id == productId)[0]
-        let priceElement = ""
-
-        if (product.onSale == 0) {
-            priceElement = <p>{product.price}</p>
-        } else {
-            const newPrice = parseFloat(product.price.replace(/\$|,/g, '')) - (parseFloat(product.price.replace(/\$|,/g, '')) * product.onSale * .01)
-            priceElement = (<>
-                <p className="newPrice">${newPrice}</p>
-                <p className="sale">{product.price}(Sale - Save {product.onSale}%)</p>
-            </>
-            )
-        }
-        return (
-            <div>
-                <p>{product.name}</p>
-                {priceElement}
-                <div className="btn" onClick={() => this.props.addToCart(product)}>Add to Cart</div>
-            </div>)
-
-    }
-
     calculateTotalDiscount(){
         const cart = JSON.parse(localStorage.getItem('cart'));
         let total = 0;
@@ -41,11 +17,10 @@ class OrderConfirmation extends React.Component {
 
     calculateSubTotal() {
         const cart = JSON.parse(localStorage.getItem('cart'));
+        console.log(cart)
         let total = 0;
         cart.forEach(item => {
-            if (item.onSale == 0) {
                 total += parseFloat(item.price.replace(/\$|,/g, ''))
-            }
         })
         return Math.round(total * 100) / 100;
     }

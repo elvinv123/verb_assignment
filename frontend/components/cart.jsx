@@ -86,9 +86,9 @@ class Cart extends React.Component {
                             <section className="cart_item_price">
                                 <p>${this.onSale(item)}</p>
                                 <div className="quantity">
-                                    <i class="fa fa-minus-circle" aria-hidden="true" onClick={() => this.handleRemoveCart(item)}></i>
+                                    <i className="fa fa-minus-circle" aria-hidden="true" onClick={() => this.handleRemoveCart(item)}></i>
                                     <p>{quantity}</p>
-                                    <i class="fa fa-plus-circle" aria-hidden="true" onClick={() => this.handleAddCart(item)}></i>
+                                    <i className="fa fa-plus-circle" aria-hidden="true" onClick={() => this.handleAddCart(item)}></i>
                                 </div>
                                 
                             </section>

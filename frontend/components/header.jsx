@@ -12,7 +12,7 @@ export default function Header(){
                     <input type="text"
                         placeholder="Search All Products"
                     />
-                    <button type="submit"><i class="fa fa-search"></i></button>
+                    <button type="submit"><i className="fa fa-search"></i></button>
                 </form>
                 </section>
             <section className="navbar">
@@ -23,9 +23,7 @@ export default function Header(){
                     <li><a href="https://angel.co/u/elvin-valette">AngelList</a></li>
                 </ul>
                 <Link to={`/cart`} className="cart">
-                    {/* <div > */}
                     <i className="fa fa-shopping-cart"></i>
-                    {/* </div> */}
                 </Link>
             </section>
         </nav>

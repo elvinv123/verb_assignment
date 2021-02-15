@@ -5,12 +5,6 @@ import $ from 'jquery';
 class Index extends React.Component{
   constructor(props) {
     super(props);
-
-    this.handleAddCart = this.handleAddCart.bind(this);
-  }
-
-  handleAddCart(product){
-    this.props.addToCart(product);
   }
 
   render() {
@@ -27,7 +21,7 @@ class Index extends React.Component{
              
             </div>
           </Link>
-        <div className="btn" onClick={this.handleAddCart(item)}>Add to Cart</div>
+        <div className="btn" onClick={() => this.props.addToCart(item)}>Add to Cart</div>
         </div>
       
     )
