@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../product_page.scss';
+import '../../styling/product_page.scss';
 
 class ProductPage extends React.Component {
     constructor(props) {

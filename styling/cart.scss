@@ -37,9 +37,15 @@ body {
 
 .main_content_cart{
     @extend .dFlex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
     h2{
         font-size: 30px;
+        padding-top: 10px;
+    }
+    .div{
+        @extend .dFlex;
+        flex-direction: column; 
     }
 }
 
@@ -51,7 +57,7 @@ body {
     border-width: 1px;
     border-radius: 3px;
     box-shadow: 0 0 15px #bfbfbf;
-    margin: 70px 20px 70px 0px;
+    margin: 40px 20px 50px 0px;
 
     .cart_item{
         @extend .dFlex;
@@ -79,7 +85,14 @@ body {
         }
     }
 }
-
+.order_total_container{
+    @extend .dFlex;
+    flex-direction: column;
+    justify-content: center;
+    a{
+        padding: 10px;
+    }
+}
 .order_total{
     border-width: 1px;
     border-radius: 3px;
@@ -89,5 +102,6 @@ body {
     justify-content: space-between;
     div{
         margin: 10px 100px 10px 10px ;
+        justify-content: center;
     }
 }

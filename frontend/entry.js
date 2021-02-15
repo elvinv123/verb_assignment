@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import '../App.scss';
+import '../../styling/App.scss';
 import {HashRouter, Route} from 'react-router-dom';
 
 import store from './store';
-import { addToCart, clearCart } from './actions';
 import IndexContainer from './components/index_container';
 import ProductPageContainer from './components/product_page_container';
 import CartContainer from './components/cart_container';

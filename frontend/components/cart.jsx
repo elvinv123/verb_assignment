@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../../cart.scss';
+import '../../styling/cart';
 
 class Cart extends React.Component {
     constructor(props) {
@@ -96,7 +96,7 @@ class Cart extends React.Component {
                 </>
             }
         )
-        const orderTotal = (<>
+        const orderTotal = (<div className="order_total_container">
             <section className="order_total">
                 <div>
                     <p>Subtotal:</p>
@@ -109,21 +109,22 @@ class Cart extends React.Component {
                     <p>$3</p>
                     <p>${this.calculateTax()}</p>
                     <p>${this.calculateTotal()}</p>
-                    <Link to={`/order`}><div className="btn">Checkout</div></Link>
+                    
                 </div>
-                
             </section>
-            
-        </>)
+            <Link to={`/order`}><div className="btn">Checkout</div></Link>
+        </div>)
         const cartEmpty = <h2>Cart Empty</h2>;
 
         return (
             <div className="main_content_cart">
                 <h2>Checkout</h2>
-                <section className="cart_content">
-                   {products} 
-                </section>
-                {cart.length > 0? orderTotal: cartEmpty}
+                <div>
+                    <section className="cart_content">
+                    {products} 
+                    </section>
+                    {cart.length > 0? orderTotal: cartEmpty}
+                </div>
             </div>
         )
     }

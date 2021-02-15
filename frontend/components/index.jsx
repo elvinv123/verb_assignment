@@ -1,9 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import $ from 'jquery';
 
 class Index extends React.Component{
   constructor(props) {
     super(props);
+
+    this.handleAddCart = this.handleAddCart.bind(this);
+  }
+
+  handleAddCart(product){
+    this.props.addToCart(product)
+    $(".added").show("slow").delay(5000).hide("slow");
   }
 
   render() {
@@ -20,12 +28,13 @@ class Index extends React.Component{
              
             </div>
           </Link>
-          <div className="btn" onClick={() => this.props.addToCart(item)}>Add to Cart</div>
+        <div className="btn" onClick={this.handleAddCart(item)}>Add to Cart</div>
         </div>
       
     )
     return (
       <div className="main_content">
+        <p className="added" style={{display: "none"}}>fuck you</p>
         {products}
       </div>
     )
