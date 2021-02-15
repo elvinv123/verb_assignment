@@ -37,7 +37,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "webpack",
     "webpack": "webpack --watch",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm run build --prefix frontend",
+    "prestart": "next build",
+    "start": "next start -p ${PORT}"
   },
   "keywords": [],
   "author": "",
