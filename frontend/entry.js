@@ -1,5 +1,4 @@
 import React from 'react';
-const path = require('path');
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import '../styling/App.scss';
