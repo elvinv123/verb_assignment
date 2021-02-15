@@ -17,7 +17,7 @@ const App = () => (
 	<HashRouter>
 		<Header/>
 			<Provider store={store}>
-					<Route exact path="/index" component={IndexContainer} />
+					<Route exact path="/" component={IndexContainer} />
 					<Route exact path="/product/:id" component={ProductPageContainer} />
 					<Route exact path="/cart" component={CartContainer} />
 					<Route exact path="/order" component={OrderConfirmation} />
