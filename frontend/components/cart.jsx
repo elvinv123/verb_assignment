@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../../styling/cart';
+import '../../styling/cart.scss';
 
 class Cart extends React.Component {
     constructor(props) {

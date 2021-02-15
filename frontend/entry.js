@@ -1,7 +1,8 @@
 import React from 'react';
+const path = require('path');
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import '../../styling/App.scss';
+import '../styling/App.scss';
 import {HashRouter, Route} from 'react-router-dom';
 
 import store from './store';

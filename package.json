@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "entry.js",
+  "homepage": "https://elvinv123.github.io/verb_assignment/",
   "dependencies": {
+    "-": "0.0.1",
     "@babel/core": "^7.12.16",
     "@babel/preset-env": "^7.12.16",
     "@babel/preset-react": "^7.12.13",
     "babel-loader": "^8.2.2",
+    "gh-pages": "^3.1.0",
     "jquery": "^3.5.1",
     "lodash": "^4.17.20",
     "react": "^17.0.1",
@@ -16,6 +19,7 @@
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
+    "save-dev": "0.0.1-security",
     "webpack": "^5.21.2",
     "webpack-cli": "^4.5.0"
   },
@@ -28,7 +32,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "webpack",
-    "webpack": "webpack --watch"
+    "webpack": "webpack --watch",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
   "keywords": [],
   "author": "",

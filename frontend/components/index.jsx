@@ -10,8 +10,7 @@ class Index extends React.Component{
   }
 
   handleAddCart(product){
-    this.props.addToCart(product)
-    $(".added").show("slow").delay(5000).hide("slow");
+    this.props.addToCart(product);
   }
 
   render() {
@@ -34,7 +33,6 @@ class Index extends React.Component{
     )
     return (
       <div className="main_content">
-        <p className="added" style={{display: "none"}}>fuck you</p>
         {products}
       </div>
     )
