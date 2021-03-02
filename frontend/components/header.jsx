@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Header(){
+export default function Header(props){
     return(
         <nav>
             <section>
@@ -23,7 +23,7 @@ export default function Header(){
                     <li><a href="https://angel.co/u/elvin-valette">AngelList</a></li>
                 </ul>
                 <Link to={`/cart`} className="cart">
-                    <i className="fa fa-shopping-cart"></i>
+                    <i className="fa fa-shopping-cart"></i>{props.cartAmount}
                 </Link>
             </section>
         </nav>

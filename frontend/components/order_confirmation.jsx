@@ -17,7 +17,6 @@ class OrderConfirmation extends React.Component {
 
     calculateSubTotal() {
         const cart = JSON.parse(localStorage.getItem('cart'));
-        console.log(cart)
         let total = 0;
         cart.forEach(item => {
                 total += parseFloat(item.price.replace(/\$|,/g, ''))

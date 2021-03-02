@@ -17,15 +17,21 @@ function removeItemOnce(cart, product) {
 const reducer = (oldState = _defaultState, action) => {
   switch(action.type) {
     case ADD_TO_CART:
-      oldState.cartItems = [...oldState.cartItems, action.item]
+      let cartItems = [...oldState.cartItems, action.item]
+      let nextState = Object.assign({}, oldState)
+      nextState.cartItems = cartItems;
       myStorage.clear();
-      myStorage.setItem('cart', JSON.stringify(oldState.cartItems))
-      return oldState;
+      console.log(cartItems)
+      myStorage.setItem('cart', JSON.stringify(nextState.cartItems))
+      return nextState;
     case REMOVE_ITEM:
-      oldState.cartItems = removeItemOnce(oldState.cartItems, action.item);
+      console.log("reducer")
+      cartItems = removeItemOnce(oldState.cartItems, action.item);
+      nextState = Object.assign({}, oldState)
+      nextState.cartItems = cartItems;
       myStorage.clear();
-      myStorage.setItem('cart', JSON.stringify(oldState.cartItems))
-      return oldState;
+      myStorage.setItem('cart', JSON.stringify(nextState.cartItems))
+      return nextState;
     case CLEAR:
       return _defaultState;
     default:
