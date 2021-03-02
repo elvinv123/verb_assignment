@@ -59,6 +59,36 @@ module.exports = {
             sku: "VR-CTBK90",
             price: "$779.99",
             onSale: 0
+        },
+        {
+            id: 7,
+            inventory: 18,
+            images: ["https://verb-assignment.s3.us-east-2.amazonaws.com/tial-19249109955_4000x.progressive.jpg"],
+            name: "TiAL Sport Q Vent-To-Atmosphere Blow Off Valve",
+            description: "Q is the first revision of the original TiAL BOV. The Q bolts up to any standard TiAL flange, no re-welding. This is the highest flowing BOV on the market. It's offered with a variety of springs for different vacuum levels and a special spring specifically for supercharged vehicles. The V-Band design aluminum mounting clamp gives a very clean and unique appearance. The clamp uses Stainless Steel hardware for a long lasting, corrosion-free appearance. The valve seal utilizes a Viton O- ring that is clamped in place to prevent the possibility of sticking to the seat and pulling out.The valve stem and guide are Teflon - lubricated, hard anodize - coated for wear resistance.The Blow Off Valve also comes with an machined aluminum banjo- type air fitting and bolt, with over sized 10mm hose barb for quick actuator response.The actuator has a high temp silicone Nomex - reinforced diaphragm for long life.",
+            sku: "TI-SPRTQV",
+            price: "$260.00",
+            onSale: 0
+        },
+        {
+            id: 8,
+            inventory: 3,
+            images: ["https://verb-assignment.s3.us-east-2.amazonaws.com/tialwgmvr_blk_v1.jpg"],
+            name: "TiAL MV-R (44mm) Wastegate",
+            description: "The TiAL® MV-R Wastegate is the most compact 44mm wastegate on the market today. The ultra-compact design (only 4.17in high) allows this external wastegate to be mounted in tight locations.This TiAL® wastegate also features two top air ports and three bottom air ports for easy installation - no need to rotate the actuator housing to get to a port.TiAL® even includes plugs to block off any unused air ports.The valve and lower housing are constructed from high temperature alloys for their unique combination of high corrosion, wear and galling resistance properties.The actuator housing is CNC machined from lightweight billet aluminum which is available color anodized for a unique appearance.All TiAL® wastegates are designed to optimize actuator- to - valve area ratio to provide maximum control and a wide dynamic flow capacity.",
+            sku: "TI-MVRWG4",
+            price: "$392.00",
+            onSale: 10
+        },
+        {
+            id: 9,
+            inventory: 7,
+            images: ["https://verb-assignment.s3.us-east-2.amazonaws.com/DSC03023_2000x.jpg"],
+            name: "High Flow Silicone Inlet Intake Kit N54 07-10 BMW 135i/335i/535i/1M/Z4",
+            description: "Replace your restrictive factory intake system with the Silicone Performance Intake Kit featuring high quality, one piece, steel wire reinforced silicone construction. Gains of up to 60whp can be realized by replacing the restrictive factory intake inlets with this bolt on kit.",
+            sku: "VR-INLT54",
+            price: "$229.99",
+            onSale: 20
         }
     ],
     carts: {
